@@ -8,7 +8,7 @@
         <th>Harga Barang</th>
         <th>Status Barang</th>
         <th>Pengirim</th>
-        <th colspan="2">Tools</th>
+        <th colspan="3">Tools</th>
     </thead>
     <?php
     foreach ($data['barang'] as $barang ) {
@@ -21,13 +21,16 @@
         <td><?= $barang['harga']?></td>
         <?php
         if($barang['status']==1){
+            if($barang['stok']>=1){
             $status="Ready";
         }else{
             $status="Sold Out";
         }
+        }
         ?>
-        <td><?= $barang['status']?></td>
+        <td><?= $status?></td>
         <td><?= $barang['nmdist']?></td>
+        <td><a href="<?= $base_url.'jual/add/'.$barang['idbarang']?>"> Beli</a></td>
         <td>Ubah</td>
         <td>Hapus</td>
     </tbody>

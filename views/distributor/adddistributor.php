@@ -1,5 +1,5 @@
 <caption><h1>Data Distributor</h1></caption>
-<form action="<?php echo $base_url?>distributor/Save" method="post">
+<form action="<?php echo $base_url?>distributor/save" method="post">
     <label for="">Nama Distributor</label>
     <input type="text" name="nmdist" id="" required>
     <label for="">Alamat</label>

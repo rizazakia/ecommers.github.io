@@ -1,5 +1,5 @@
+<caption><h1>List Jenis</h1></caption>
 <table border=1>
-    <caption><h1>List Jenis</th></caption>
     <thead>
         <th>Nomor</th>
         <th>Jenis</th>
@@ -14,9 +14,9 @@
         <td><?= $no ?></td>
         <td><?= $jenis['jenisbarang'] ?></td>
         <td><?= $jenis['ket'] ?></td>
-        <td>Ubah</td>
-        <td>Hapus</td>
-    </tbody>
+        <td><a href="<?= $base_url.'jenis/edit/'.$jenis['idjenis']?>">Ubah</a></td>
+        <td><a href="<?= $base_url.'jenis/hapus/'.$jenis['idjenis']?>"onclick="return confirm('Yakin anda ingin menghapus?')">Hapus</a></td>
+</tbody>
     <?php
         $no++;
         }

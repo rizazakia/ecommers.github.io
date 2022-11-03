@@ -1,6 +1,9 @@
+<!-- CSS LOGIN -->
+<link rel="stylesheet" href="assets/css/styleLogin.css">
+<title><?= $data['title']; ?></title>
 <main class="form-signin w-100 m-auto">
-    <form action="login_proses.php" method="POST">
-      <img class="mb-4 rounded-circle" src="assets/img/logo_login.jpg" alt="" width="100" height="57">
+    <form action="<?= $base_url;?>c_login/Send" method="POST">
+      <img class="mb-4 rounded-circle" src="assets/img/login.jpg" alt="" width="100" height="57">
       <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
 
       <?php

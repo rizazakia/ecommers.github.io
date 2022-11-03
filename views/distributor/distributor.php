@@ -1,5 +1,5 @@
 <table border=1>
-    <caption><h1>List Distributor</th></caption>
+    <caption><h1>List Distributor</h1></caption>
     <thead>
         <th>Nomor</th>
         <th>Nama Distributor</th>
