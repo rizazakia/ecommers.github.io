@@ -1,4 +1,11 @@
-<!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</div>
+<!-- jQuery first, then Metro UI JS -->
+<script src="<?= $base_url?>/assets/vendors/jquery/jquery-3.4.1.min.js"></script>
+<script src="<?= $base_url?>/assets/vendors/chartjs/Chart.bundle.min.js"></script>
+<script src="<?= $base_url?>/assets/vendors/qrcode/qrcode.min.js"></script>
+<script src="<?= $base_url?>/assets/vendors/jsbarcode/JsBarcode.all.min.js"></script>
+<script src="<?= $base_url?>/assets/vendors/ckeditor/ckeditor.js"></script>
+<script src="<?= $base_url?>/assets/vendors/metro4/js/metro.min.js"></script>
+<script src="<?= $base_url?>/assets/js/index.js"></script>
 </body>
 </html>
