@@ -7,17 +7,21 @@
              $kd="0001";
         }   
     date_default_timezone_set('asia/jakarta');
-    $kodejual=date('ymd').$kd;
+    $kodejual=date('mdy').$kd;
     }
 ?>
 <script type="text/javascript">
-    function starCalc(){
+    function startCalc(){
         interval=setInterval("calc()",1);
     }
     function calc(){
         harga=document.jual.harga.value;
-        jmlbarang=document.jual.jmlbarang.value;
-        document.jual.totalharga.value=(harga*1)*(qty*1);
+        qty=document.jual.jmlbarang.value;
+        bayar=document.jual.bayar.value;
+        total=document.jual.totalharga;
+        kembalian=document.jual.kembali;
+        total.value=(harga*1)*(qty*1);
+        kembalian.value=(bayar*1)-(total.value*1);
     }
     function stopCalc(){
         clearInterval(interval);
@@ -25,14 +29,14 @@
 </script>
 <caption><h1>Data Jual</h1></caption>
 <div>
-    <form action="" method="post" name="jual">
+    <form action="<?= $base_url?>jual/save" method="post" name="jual">
         <div>
             <label for="">Id Jual</label>
             <input type="text" name="idjual" id="" value="<?= $kodejual?>" readonly>
         </div>
         <div>   
             <label for="">Tanggal Transaksi</label>
-            <input type="date" name="tgljual" id="" placeholder="yyyy-mm-dd" required>
+            <input type="text" name="tgljual" id="" placeholder="d-m-y" value="<?= date('d-m-y')?>" required>
         </div>
         <div>
             <?php
@@ -56,11 +60,14 @@
         </div>
         <div>
             <label for="">Bayar</label>
-            <input type="number" name="bayar" required>
+            <input type="number" name="bayar" onfocus="startCalc()" onblur="stopCalc()" required>
         </div>
         <div>
             <label for="">Kembalian</label>
-            <input type="number" name="kembalian" readonly>
+            <input type="number" name="kembali" onfocus="startCalc()" onblur="stopCalc()" readonly>
+        <div>
+            <button type="submit">simpan</button>
+        </div>
         </div>
     </form>
 </div>

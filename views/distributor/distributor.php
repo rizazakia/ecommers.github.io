@@ -1,5 +1,5 @@
-<table border=1>
-    <caption><h1>List Distributor</h1></caption>
+<div data-role="panel" data-title-caption="List Jenis" data-collapsible="true" data-title-icon="<span class='mif-chart-line'></span>" class="mt-4">
+<table  class="table row-hover">
     <thead>
         <th>Nomor</th>
         <th>Nama Distributor</th>
@@ -16,8 +16,8 @@
         <td><?= $distributor['nmdist'] ?></td>
         <td><?= $distributor['alamat'] ?></td>
         <td><?= $distributor['notelp'] ?></td>
-        <td>Ubah</td>
-        <td>Hapus</td>
+        <td  class="button info"><span class="mif-pencil"></span></td>
+        <td class="button alert"><span class="mif-bin"></span></td>
     </tbody>
     <?php
         $no++;

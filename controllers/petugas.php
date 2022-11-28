@@ -1,4 +1,4 @@
 <?php
 if($aksi=='index'){
-    $helpers->load_view('petugas/petugas.php');
+    $helpers->template('petugas/petugas.php');
 }

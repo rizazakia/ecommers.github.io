@@ -1,13 +1,13 @@
 <?php 
 if($aksi=='index'){
     $data['barang']=$db->query($connect,"SELECT * FROM vbarang");
-    $helpers->load_view('Barang/barang.php',$data);
+    $helpers->template('Barang/barang.php',$data);
 }
 if($aksi=='add'){
     $data['kdbarang']=$db->query($connect,"SELECT max(idbarang) as kodebarang FROM tbarang");
     $data['jenisbarang']=$db->query($connect, "SELECT * FROM tjenis");
     $data['distri']=$db->query($connect, "SELECT * FROM tdistributor");
-    $helpers->load_view('Barang/addbarang.php',$data);
+    $helpers->template('Barang/addbarang.php',$data);
 }
 if($aksi=='save'){
     $idbarang=$_POST['idbarang'];
@@ -23,4 +23,11 @@ if($aksi=='save'){
         else{
             header('location'.$base_url.'barang/add');
         }
+}
+if($aksi=='edit'){
+    $idbarang=$uri['4'];
+    $data['brg']=$db->query($connect,"SELECT * FROM vbarang WHERE idbarang=$idbarang");
+    $data['jenisbarang']=$db->query($connect, "SELECT * FROM tjenis");
+    $data['distri']=$db->query($connect, "SELECT * FROM tdistributor");
+    $helpers->template('Barang/editbarang.php',$data);
 }

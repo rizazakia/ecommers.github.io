@@ -1,5 +1,5 @@
-<caption><h1>Daftar Barang</h1></caption>
-<table border=1>
+<div data-role="panel" data-title-caption="List Barang" data-collapsible="true" data-title-icon="<span class='mif-chart-line'></span>" class="mt-4">
+<table class="table row-hover">
     <thead>
         <th>Id Barang</th>
         <th>Nama Barang</th>
@@ -30,9 +30,10 @@
         ?>
         <td><?= $status?></td>
         <td><?= $barang['nmdist']?></td>
-        <td><a href="<?= $base_url.'jual/add/'.$barang['idbarang']?>"> Beli</a></td>
-        <td>Ubah</td>
-        <td>Hapus</td>
+        <td><a class="button warning" href="<?= $base_url.'jual/add/'.$barang['idbarang']?>"><span class="mif-add-shopping-cart"></span></a>
+        <a  class="button info" href="<?= $base_url.'barang/edit/'.$barang['idbarang']?>"><span class="mif-pencil"></span></a></td>
+     <td class="button alert"><span class="mif-bin"></span></td>
     </tbody>
     <?php } ?>
 </table>
+    </div>

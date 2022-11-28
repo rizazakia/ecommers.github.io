@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="<?= $base_url?>/assets/vendors/metro4/css/metro-all.min.css">
     <link rel="stylesheet" href="<?= $base_url?>/assets/css/index.css">
 
-    <title>aplikasi Eccomers</title>
+    <title>Aplikasi Ecommers</title>
 
     <script>
         window.on_page_functions = [];

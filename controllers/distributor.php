@@ -1,10 +1,10 @@
 <?php
 if($aksi=='index'){
     $data['distributor']=$db->query($connect,"SELECT * FROM tdistributor");
-    $helpers->load_view('distributor/distributor.php',$data);
+    $helpers->template('distributor/distributor.php',$data);
 }
 if($aksi=='Add'){
-    $helpers->load_view('distributor/adddistributor.php');
+    $helpers->template('distributor/adddistributor.php');
 }
 if($aksi=='Save'){
     $nmdist=$_POST['nmdist'];

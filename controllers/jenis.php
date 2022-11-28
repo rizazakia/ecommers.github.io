@@ -2,10 +2,10 @@
 if($aksi=='index'){
     
     $data['jenis']=$db->query($connect,"SELECT * FROM tjenis");
-    $helpers->load_view('jenis/jenis.php',$data);
+    $helpers->template('jenis/jenis.php',$data);
 }
 if($aksi=='Add'){
-    $helpers->load_view('jenis/addjenis.php');
+    $helpers->template('jenis/addjenis.php');
 }
 if($aksi=='save'){
     $jenisbarang=$_POST['jenisbarang'];
@@ -20,7 +20,7 @@ if($aksi=='save'){
 if($aksi=='edit'){
     $idjenis=$uri[4];
     $data['jenis']=$db->query($connect,"SELECT * FROM tjenis WHERE idjenis='$idjenis'");
-    $helpers->load_view('jenis/editjenis.php',$data);
+    $helpers->template('jenis/editjenis.php',$data);
 }
 if ($aksi=='ubah'){
     $idjenis=$uri[4];
